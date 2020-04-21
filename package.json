@@ -1,0 +1,23 @@
+{
+  "name": "crypto_bot",
+  "version": "1.0.0",
+  "description": "Bot that replies with the real information of Cryptocurreny.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ISHaNT-CHaHaR/Crypto_BOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ISHaNT-CHaHaR/Crypto_BOT/issues"
+  },
+  "homepage": "https://github.com/ISHaNT-CHaHaR/Crypto_BOT#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "telegraf": "^3.37.0"
+  }
+}
