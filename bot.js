@@ -23,6 +23,7 @@ function sendStartMessage(ctx) {
          inline_keyboard: [
             [{ text: 'Crypto Prices', callback_data: 'price' }],
             [{ text: 'coinMarketCap', url: 'https://coinmarketcap.com/' }],
+            [{ text: 'INFO.', callback_data: 'info' }],
          ],
       },
    });
@@ -80,6 +81,27 @@ bot.action(priceActionList, async (ctx) => {
       console.log(err);
       ctx.reply('Error Encountered!');
    }
+});
+
+bot.action('info', (ctx) => {
+   ctx.answerCbQuery();
+   bot.telegram.sendMessage(ctx.chat.id, 'Bot info', {
+      reply_markup: {
+         keyboard: [[{ text: 'Credits' }, { text: 'API' }]],
+         resize_keyboard: true,
+         one_time_keyboard: true,
+      },
+   });
+});
+
+bot.hears('Credits', (ctx) => {
+   ctx.reply(' This piece of art made by Ishant ');
+});
+
+bot.hears('API', (ctx) => {
+   ctx.reply(
+      'This Bot uses cryptocompare API.\nhttps://min-api.cryptocompare.com/'
+   );
 });
 
 // bot.command('test', (ctx) => {
